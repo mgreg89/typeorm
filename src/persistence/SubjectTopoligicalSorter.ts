@@ -52,8 +52,8 @@ export class SubjectTopoligicalSorter {
             sortedSubjects.push(...junctionSubjects);
             this.removeAlreadySorted(junctionSubjects);
         }
-
-        // next we always insert entities with non-nullable relations, sort them first
+// COMMENTED OUT BY mgreg89
+/*        // next we always insert entities with non-nullable relations, sort them first
         const nonNullableDependencies = this.getNonNullableDependencies();
         let sortedNonNullableEntityTargets = this.toposort(nonNullableDependencies);
         if (direction === "insert")
@@ -67,7 +67,7 @@ export class SubjectTopoligicalSorter {
             sortedSubjects.push(...entityTargetSubjects);
             this.removeAlreadySorted(entityTargetSubjects);
         });
-
+*/
         // next sort all other entities
         // same process as in above but with other entities
         const otherDependencies: string[][] = this.getDependencies();
