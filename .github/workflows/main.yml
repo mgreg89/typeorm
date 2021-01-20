@@ -33,9 +33,9 @@ jobs:
        
       - name: Add package folder
         run: |
-            mv ./build/package ~/package,
-            rm -rf *,
-            mv ~/package .,
+            mv ./build/package ~/package
+            rm -rf *
+            mv ~/package .
             git add -A
 
       - name: Push changes
