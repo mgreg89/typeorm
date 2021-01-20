@@ -30,6 +30,13 @@ jobs:
 
       - name: Print build directory
         run: ls -al ./build/package
+       
+      - name: Add package folder
+        run: |
+            mv ./build/package ~/package,
+            rm -rf *,
+            mv ~/package .,
+            git add -A
 
       - name: Push changes
         uses: ad-m/github-push-action@master
