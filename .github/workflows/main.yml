@@ -34,14 +34,14 @@ jobs:
       - name: mv ./build/package ~/package
         run: mv ./build/package ~/package
 
-      - name: rm -rf *
-        run: rm -rf *
+      - name: rm -rf * .*
+        run: rm -rf * .*
 
       - name: Print build directory
         run: ls -al .
        
-      - name: mv ~/package .
-        run: mv ~/package .
+      - name: mv ~/package/* .
+        run: mv ~/package/* .
 
       - name: Print build directory
         run: ls -al .
