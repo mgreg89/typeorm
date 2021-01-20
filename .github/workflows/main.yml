@@ -38,13 +38,13 @@ jobs:
         run: rm -rf *
 
       - name: Print build directory
-        run: ls -al ./build/package
+        run: ls -al .
        
       - name: mv ~/package .
         run: mv ~/package .
 
       - name: Print build directory
-        run: ls -al ./build/package
+        run: ls -al .
         
       - name: git add
         run: git add -A
