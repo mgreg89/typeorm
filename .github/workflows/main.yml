@@ -1,6 +1,4 @@
-# This is a basic workflow to help you get started with Actions
-
-name: Create 
+name: Create Package branch for npm install from this GitHub repo 
 
 # Controls when the action will run. 
 on:
@@ -13,10 +11,9 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  packaging:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -34,7 +31,5 @@ jobs:
         run: gulp package
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - name: Print build directory
+        run: ls -al ./build/package
