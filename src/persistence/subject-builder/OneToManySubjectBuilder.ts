@@ -1,7 +1,7 @@
 import {Subject} from "../Subject";
 import {OrmUtils} from "../../util/OrmUtils";
 import {ObjectLiteral} from "../../common/ObjectLiteral";
-import {EntityMetadata} from "../../metadata/EntityMetadata";
+// COMMENTED OUT BY mgreg89 // import {EntityMetadata} from "../../metadata/EntityMetadata";
 import {RelationMetadata} from "../../metadata/RelationMetadata";
 
 /**
