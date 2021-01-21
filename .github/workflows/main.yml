@@ -19,8 +19,19 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - uses: oprypin/find-latest-tag@v1
+        with:
+          repository: mgreg89/typeorm  # The repository to scan.
+          releases-only: true  # We know that all relevant tags have a GitHub release for them.
+        id: typeorm  # The step ID to refer to later.
+
+      - run: echo "TypeORM is at version ${{ steps.typeorm.outputs.tag }}"
+      
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+        with:
+          repository: mgreg89/typeorm  # Download that repository.
+          ref: ${{ steps.typeorm.outputs.tag }}  # At the latest released version, found earlier.
 
       - name: npm install
         run: npm install
