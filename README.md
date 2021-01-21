@@ -1,4 +1,4 @@
-##CHANGES in this Repo
+## CHANGES in this Repo
 - fix for cascade sort order in SubjectTopoligicalSorter.ts and disabled nullification in OneToManySubjectBuilder.ts (commented out code blocks)
 - GitHub Action workflow, which takes the branch 'latestRelease' and will package a build of typeorm in the branch 'package'. It can be installed via npm i git+https://github.com/mgreg89/typeorm.git#package
     - **To upgrade** to a new version of the original typeORM, first merge the local branch **latestRelease** with the latest tag from original typeORM (following https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/merging-an-upstream-repository-into-your-fork using `git pull https://github.com/typeorm/typeorm.git tag <latestTag>`). Push the merge to branch **latestRelease** and this event will trigger the workflow to run.
