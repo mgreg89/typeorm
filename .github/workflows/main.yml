@@ -37,6 +37,11 @@ jobs:
 
       - name: rm -rf *
         run: rm -rf *
+      
+      - name: Checkout repository from branch package
+        uses: actions/checkout@v2
+        with:
+          ref: package
 
       - name: Print build directory
         run: ls -al .
