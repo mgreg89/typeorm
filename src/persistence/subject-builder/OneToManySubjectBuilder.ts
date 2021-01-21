@@ -153,9 +153,9 @@ export class OneToManySubjectBuilder {
             // removed relations are set to null from inverse side of relation
             relatedPersistedEntityRelationIds.push(relationIdMap);
         });
-
+// COMMENTED OUT BY mgreg89
         // find what related entities were added and what were removed based on difference between what we save and what database has
-        EntityMetadata
+/*        EntityMetadata
             .difference(relatedEntityDatabaseRelationIds, relatedPersistedEntityRelationIds)
             .forEach(removedRelatedEntityRelationId => { // by example: removedRelatedEntityRelationId is category that was bind in the database before, but now its unbind
 
@@ -180,6 +180,7 @@ export class OneToManySubjectBuilder {
 
                 this.subjects.push(removedRelatedEntitySubject);
             });
+*/
     }
 
 }
