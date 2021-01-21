@@ -3,6 +3,10 @@
 - GitHub Action workflow, which takes the branch 'latestRelease' and will package a build of typeorm in the branch 'package'. It can be installed via npm i git+https://github.com/mgreg89/typeorm.git#package
     - **To upgrade** to a new version of the original typeORM, first merge the local branch **latestRelease** with the latest tag from original typeORM (following https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/merging-an-upstream-repository-into-your-fork using `git pull https://github.com/typeorm/typeorm.git tag <latestTag>`). Push the merge to branch **latestRelease** and this event will trigger the workflow to run.
 
+
+
+## Original ReadMe
+
 <div align="center">
   <a href="http://typeorm.io/">
     <img src="https://github.com/typeorm/typeorm/raw/master/resources/logo_big.png" width="492" height="228">
